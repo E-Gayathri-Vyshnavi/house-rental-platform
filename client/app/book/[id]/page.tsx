@@ -18,7 +18,7 @@ export default function BookingPage() {
 
     // 1. Save Booking to your MongoDB first (Pending Status)
     const userData = JSON.parse(localStorage.getItem('user') || '{}');
-    const res = await fetch('https://renthouse-jfqv.onrender.com/api/bookings', {
+    const res = await fetch('${process.env.NEXT_PUBLIC_API_URL}/api/bookings', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

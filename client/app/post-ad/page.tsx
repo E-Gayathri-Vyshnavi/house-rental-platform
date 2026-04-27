@@ -45,7 +45,7 @@ const PostAd = () => {
                 imageUrl: imageUrl 
             };
 
-            const response = await fetch('https://renthouse-jfqv.onrender.com/api/properties', {
+            const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/api/properties', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(finalData)
