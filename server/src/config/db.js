@@ -1,0 +1,14 @@
+const mongoose = require('mongoose');
+
+const connectDB = async () => {
+    try {
+        // We use process.env to keep your credentials secret
+        const conn = await mongoose.connect(process.env.MONGO_URI);
+        console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+        console.error(`❌ Error: ${error.message}`);
+        process.exit(1); // Stop the server if database fails
+    }
+};
+
+module.exports = connectDB;

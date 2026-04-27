@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* If you want to create a custom class like .max-container, 
+   you must use standard CSS properties or the new v4 @theme blocks.
+   However, for a quick fix, let's just set the CSS directly: */
+
+@layer components {
+  .max-container {
+    max-width: 80rem; /* This is the same as max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+body {
+  background-color: #ffffff;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
