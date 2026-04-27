@@ -17,7 +17,7 @@ export default function Home() {
 
   const fetchProps = async () => {
     const params = new URLSearchParams(filters).toString();
-    const res = await fetch(`http://localhost:5000/api/properties?${params}`);
+    const res = await fetch(`https://renthouse-jfqv.onrender.com/properties?${params}`);
     const data = await res.json();
     setProps(data);
   };
