@@ -17,7 +17,7 @@ const PropertyCard = ({ _id, price, title, location, category, image }: any) => 
   // Example: https://house-rental-platform-1.onrender.com/uploads/house123.jpg
   const displayImage = image 
     ? `${process.env.NEXT_PUBLIC_API_URL}/${image}`
-    : (IMG_URLS[category] || IMG_URLS["Apartment"]);
+    : "https://via.placeholder.com/400";
 
   return (
     <div className="group bg-white rounded-3xl border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col h-full">
