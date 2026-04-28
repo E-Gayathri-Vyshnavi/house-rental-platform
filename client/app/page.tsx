@@ -13,7 +13,7 @@ export default function Home() {
     const user = localStorage.getItem('user');
     if (!user) router.push('/login');
     else fetchProps();
-  }, [filters.category]);
+  }, [filters.category,filters.location]);
 
   const fetchProps = async () => {
     const params = new URLSearchParams(filters).toString();
